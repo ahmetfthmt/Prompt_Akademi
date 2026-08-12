@@ -17,6 +17,7 @@ import Quiz from "./pages/Quiz";
 import Safety from "./pages/Safety";
 import Resources from "./pages/Resources";
 import ModelStudio from "./pages/ModelStudio";
+import LessonDetail from "./pages/LessonDetail";
 
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
     <AppShell>
       <Switch>
         <Route path={"/"} component={Home} />
+        <Route path={"/dersler/:moduleId/:lessonId"} component={LessonDetail} />
         <Route path={"/dersler"} component={Academy} />
         <Route path={"/laboratuvar"} component={Lab} />
         <Route path={"/ornek-kutuphanesi"} component={Library} />

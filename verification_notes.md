@@ -29,6 +29,15 @@ Görsel üretim URL'leri, üretim tamamlandığında rezerv yer tutucularının 
 
 - Laboratuvardaki görev alanı, “bağlamın rolü” konusuna ait yeni bir görevle değiştirildiğinde derlenmiş istemin görev bölümü aynı metinle anında güncellenmiştir.
 
+## Ayrıntılı Ders Sayfası
+
+- İlk ders rotası `/dersler/baslangic/what-is` adresinde açıldı; giriş anlatımı, öğrenme hedefleri, açılır kavram bölümleri, iyi–kötü prompt karşılaştırması, mini uygulama, ders tamamlama eylemi ve sonraki ders bağlantısı görünürdür.
+- Mini uygulamada doğru B seçeneği işaretlenebiliyor; seçimin ardından yanıt kontrol akışı etkin hâle geliyor. Ders sayfasındaki hareketli sinyal çizimi ve süreç görseli masaüstü görünümünde doğru yerleşti.
+- Tarayıcı DOM kontrolünde ders alıştırması dört seçenekle yüklendi; bir seçenek seçildiğinde kontrol düğmesinin etkinleştiği doğrulandı. Gerekçeli geri bildirim, kontrol düğmesine basıldıktan sonra görünür hâle gelir.
+- Doğru seçenek için kontrol eylemi sonrası “Doğru bağlantıyı kurdunuz” ve dersin kavramsal gerekçesini içeren geri bildirim paneli görüntülendi.
+- Güvenlik modülünün son dersi `/dersler/guvenlik/safety-radar` rotasında ayrıntılı dört sinyal anlatımı, radar görseli, güvenli–kontrolsüz prompt karşılaştırması, alıştırma ve önceki ders bağlantısıyla başarıyla yüklendi.
+- `safety-radar` dersi tamamlandığında tarayıcıdaki ilerleme kaydına eklendi. Ders rotasında genel ilerleme `1/19` ve `%5`, güvenlik modülü ilerlemesi ise `1/4` olarak güncellendi; ders bağlantıları ayrıntılı rota adreslerine yönleniyor.
+
 ## Model Karşılaştırma İstasyonu
 
 - ChatGPT, Claude ve Gemini için üç ayrı seçim sekmesi görünürdür.

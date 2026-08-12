@@ -3,6 +3,7 @@
  * not a flat list of articles. User actions leave a persistent learning trace.
  */
 import { useMemo, useState } from "react";
+import { Link } from "wouter";
 import { ChevronDown, Check, Clock3, Compass, LockKeyhole, Play, Sparkles, Target } from "lucide-react";
 import { getCompleted, modules, setCompleted, totalLessons } from "@/lib/courseData";
 
@@ -66,7 +67,7 @@ export default function Academy() {
                   <div className="module-title-group"><span className="micro-label">{module.level} · {module.duration}</span><h2>{module.title}</h2><p>{module.subtitle}</p></div>
                   <div className="module-progress-label"><Icon size={19} /><span>{done}/{module.lessons.length}</span><ChevronDown size={18} className={open ? "rotated" : ""} /></div>
                 </button>
-                {open && <div className="lesson-list"><div className="module-objective"><Target size={16} /><span><strong>Modül hedefi:</strong> {module.objective}</span></div>{module.lessons.map((lesson, index) => { const isDone = completed.includes(lesson.id); return <div className="lesson-row" key={lesson.id}><button onClick={() => mark(lesson.id)} className={`lesson-check ${isDone ? "done" : ""}`} aria-label={`${lesson.title} tamamlandı olarak işaretle`}>{isDone ? <Check size={15} /> : <span>{index + 1}</span>}</button><div><strong>{lesson.title}</strong><span>{lesson.kind} · <Clock3 size={13} /> {lesson.duration}</span></div><button onClick={() => mark(lesson.id)} className="lesson-action">{isDone ? "Tamamlandı" : <><Play size={14} /> Başla</>}</button></div>})}<div className="module-footer"><span>{done === module.lessons.length ? <><Sparkles size={15} /> Modül damgası kazanıldı</> : "Bir sonraki dersi tamamlayarak ilerleyin."}</span></div></div>}
+                {open && <div className="lesson-list"><div className="module-objective"><Target size={16} /><span><strong>Modül hedefi:</strong> {module.objective}</span></div>{module.lessons.map((lesson, index) => { const isDone = completed.includes(lesson.id); return <div className="lesson-row" key={lesson.id}><button onClick={() => mark(lesson.id)} className={`lesson-check ${isDone ? "done" : ""}`} aria-label={`${lesson.title} tamamlandı olarak işaretle`}>{isDone ? <Check size={15} /> : <span>{index + 1}</span>}</button><Link href={`/dersler/${module.id}/${lesson.id}`} className="lesson-row-content"><strong>{lesson.title}</strong><span>{lesson.kind} · <Clock3 size={13} /> {lesson.duration}</span></Link><Link href={`/dersler/${module.id}/${lesson.id}`} className="lesson-action">{isDone ? "Tekrar aç" : <><Play size={14} /> Dersi aç</>}</Link></div>})}<div className="module-footer"><span>{done === module.lessons.length ? <><Sparkles size={15} /> Modül damgası kazanıldı</> : "Bir sonraki dersi tamamlayarak ilerleyin."}</span></div></div>}
               </article>
             );
           })}
