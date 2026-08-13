@@ -18,6 +18,7 @@ import Safety from "./pages/Safety";
 import Resources from "./pages/Resources";
 import ModelStudio from "./pages/ModelStudio";
 import LessonDetail from "./pages/LessonDetail";
+import Certificate from "./pages/Certificate";
 
 
 function Router() {
@@ -32,6 +33,7 @@ function Router() {
         <Route path={"/testler"} component={Quiz} />
         <Route path={"/guvenlik"} component={Safety} />
         <Route path={"/model-karsilastirma"} component={ModelStudio} />
+        <Route path={"/sertifika"} component={Certificate} />
         <Route path={"/kaynaklar"} component={Resources} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />

@@ -14,6 +14,13 @@
 - [x] Ders kartlarını gerçek ders sayfalarına bağla ve ilerleme akışını koru.
 - [x] Ders sayfalarını, etkileşimlerini ve üretim derlemesini doğrula.
 
+## Bitirme Sertifikası
+
+- [x] Tamamlanma koşulunu ve sertifika erişim akışını ekle.
+- [x] Ad soyad alanı ile kişiselleştirilen sertifika ekranını oluştur.
+- [x] Sertifikayı PDF olarak indirme işlevini uygula.
+- [x] Kilitli ve tamamlanmış sertifika durumlarını doğrula.
+
 - [x] Proje klasörünü hiyerarşik yapısı korunacak biçimde ZIP arşivine ekle.
 - [x] Arşivde ana proje klasörü, kaynak kodlar ve yapılandırma dosyalarının yer aldığını doğrula.
 - [x] ZIP dosyasını kullanıcıya ek olarak teslim et.

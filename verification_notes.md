@@ -38,6 +38,13 @@ Görsel üretim URL'leri, üretim tamamlandığında rezerv yer tutucularının 
 - Güvenlik modülünün son dersi `/dersler/guvenlik/safety-radar` rotasında ayrıntılı dört sinyal anlatımı, radar görseli, güvenli–kontrolsüz prompt karşılaştırması, alıştırma ve önceki ders bağlantısıyla başarıyla yüklendi.
 - `safety-radar` dersi tamamlandığında tarayıcıdaki ilerleme kaydına eklendi. Ders rotasında genel ilerleme `1/19` ve `%5`, güvenlik modülü ilerlemesi ise `1/4` olarak güncellendi; ders bağlantıları ayrıntılı rota adreslerine yönleniyor.
 
+## Bitirme Sertifikası
+
+- Sertifika rotası, eksik ders bulunduğunda `1/19` ilerleme bilgisini ve kilitli durumu gösteriyor; kişiselleştirme ile PDF indirme alanı erişilebilir değil ve ders rotasına dönüş eylemi görünür.
+- Tüm 19 ders kimliği tarayıcı ilerleme kaydına yazıldığında sertifika erişim eşiği karşılandı; ekranın kilitli durumdan kişiselleştirme durumuna geçmesi için sayfa yenilendi.
+- Tamamlanmış durumda sertifika ekranı kişiselleştirme alanını, PDF indirme eylemini ve A4 yatay oranlı canlı önizlemeyi gösterdi. “Deniz Yılmaz” adı girildiğinde önizleme başlığı anlık olarak aynı adla güncellendi.
+- “PDF sertifikayı indir” eylemi başarı bildirimi gösterdi ve `/home/ubuntu/Downloads/prompt-muhendisligi-akademisi-sertifika-deniz-yılmaz.pdf` dosyası oluşturuldu.
+
 ## Model Karşılaştırma İstasyonu
 
 - ChatGPT, Claude ve Gemini için üç ayrı seçim sekmesi görünürdür.

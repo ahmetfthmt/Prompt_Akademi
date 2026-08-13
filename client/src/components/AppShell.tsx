@@ -3,7 +3,7 @@
  */
 import { Link, useLocation } from "wouter";
 import { useEffect, useMemo, useState } from "react";
-import { BookOpen, ChevronRight, FlaskConical, Menu, ShieldCheck, Sparkles, X } from "lucide-react";
+import { Award, BookOpen, ChevronRight, FlaskConical, Menu, ShieldCheck, Sparkles, X } from "lucide-react";
 import { getCompleted, totalLessons } from "@/lib/courseData";
 
 const nav = [
@@ -14,6 +14,7 @@ const nav = [
   { href: "/model-karsilastirma", label: "Modeller" },
   { href: "/testler", label: "Testler" },
   { href: "/guvenlik", label: "Güvenlik" },
+  { href: "/sertifika", label: "Sertifika" },
 ];
 
 function NavLink({ href, label, onClick }: { href: string; label: string; onClick?: () => void }) {
@@ -83,6 +84,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
             <Link href="/dersler"><BookOpen size={15} /> Ders Rotası</Link>
             <Link href="/laboratuvar"><FlaskConical size={15} /> Prompt Laboratuvarı</Link>
             <Link href="/guvenlik"><ShieldCheck size={15} /> Güvenli Uygulama</Link>
+            <Link href="/sertifika"><Award size={15} /> Sertifika</Link>
             <Link href="/kaynaklar">Kaynaklar <ChevronRight size={15} /></Link>
           </div>
           <p className="footer-note">Bu platformdaki model çıktı panelleri öğrenme amaçlı temsilî örneklerdir. Gerçek kullanımda güncel dokümantasyonu ve sonuçları ayrıca doğrulayın.</p>
